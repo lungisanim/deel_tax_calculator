@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="post">
+    <table class="table thead-dark">
+        <thead>
+            <tr>
+                <td>
+                    <label asp-for="PostalCode" class="control-label"></label>
+                </td>
+                <td>
+                    <label asp-for="AnnualIncome" class="control-label"></label>
+                </td>
+                <td>
+                    Actions
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select asp-for="PostalCode" asp-items="ViewBag.PostalCodes" class="form-control"></select>
+                </td>
+                <td>
+                    <input asp-for="AnnualIncome" class="form-control" />
+                </td>
+                <td colspan="2">
+                    <input type="submit" value="Calculate" onsubmit="SubmitEvent" class="btn btn-primary" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+
