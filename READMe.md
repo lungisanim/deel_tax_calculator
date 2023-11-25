@@ -6,3 +6,5 @@ Then run the Deel,sql on the database to creat the necessary tables and inserts
 
 You might need to restore the nuget packages if necessary.
 Run the solution.
+
+Test units project at : https://github.com/lungisanim/deel_tax_calculator_tests
