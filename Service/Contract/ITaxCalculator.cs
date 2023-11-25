@@ -1,7 +1,4 @@
-﻿
-using TaxCalculator.Models;
-
-namespace TaxCalculator.Service.Contract
+﻿namespace TaxCalculator.Service.Contract
 {
     public interface ITaxCalculator
     {

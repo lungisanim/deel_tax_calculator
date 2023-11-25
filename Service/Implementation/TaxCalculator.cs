@@ -8,13 +8,11 @@ namespace TaxCalculator.Service.Implementation
     public class TaxCalculator : ITaxCalculator
     {
         private readonly ILogger<TaxCalculator> _logger;
-        private readonly IConfiguration _configuration;
         private readonly TaxCalculationContext _taxContext;
 
-        public TaxCalculator(ILogger<TaxCalculator> logger, IConfiguration configuration, TaxCalculationContext taxContext)
+        public TaxCalculator(ILogger<TaxCalculator> logger, TaxCalculationContext taxContext)
         {
             _logger = logger;
-            _configuration = configuration;
             _taxContext = taxContext;
         }
 

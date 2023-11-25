@@ -44,8 +44,8 @@ namespace TaxCalculator.Pages
                     _logger.LogInformation("Tax Calculations for {0} - {1}", index.PostalCode, index.AnnualIncome);
                     TaxCalculation taxCalculation = new()
                     {
-                        CalculatedTax = _taxCalculator.CalculateTax(index.PostalCode, index.AnnualIncome),
-                        PostalCode = index.PostalCode.ToString(),
+                        CalculatedTax = _taxCalculator.CalculateTax(index.PostalCode??string.Empty, index.AnnualIncome),
+                        PostalCode = index.PostalCode??string.Empty,
                         AnnualIncome = index.AnnualIncome,
                         CalculationDate = DateTime.Now
                     };
